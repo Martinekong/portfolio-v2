@@ -36,6 +36,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  margin-bottom: 100px;
+}
+
+@layer components {
+  .section-wrapper {
+    @apply max-w-6xl mx-auto px-6 mb-50;
+  }
 }

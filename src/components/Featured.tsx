@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 export default function Featured() {
   return (
-    <section id="projects" className="max-w-6xl px-6 mx-auto">
+    <section id="projects" className="section-wrapper">
       <span className="tracking-widest uppercase text-[#A3DCE6]">
         portfolio
       </span>

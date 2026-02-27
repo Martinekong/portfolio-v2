@@ -11,7 +11,7 @@ export default function ProjectCard({project}: {project: Project}) {
 
       <div className="flex flex-1 flex-col gap-6 px-4 pb-6">
         <h3 className="text-3xl tracking-wider">{name}</h3>
-        <p>{teaser}</p>
+        <p className="text-white/80">{teaser}</p>
         <div className="flex flex-wrap gap-3">
           {tech.map((t) => (
             <span
