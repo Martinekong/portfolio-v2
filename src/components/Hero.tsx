@@ -16,8 +16,8 @@ export default function Hero() {
         A Frontend Developer
       </p>
       <p className="mt-6 max-w-lg text-pretty text-white/90 leading-relaxed tracking-wide">
-        I design and build beautiful, responsive and performant web experiences
-        with modern technologies and pixel-perfect attention to detail.
+        I design and build modern, responsive and scalable web applications,
+        combining clean architecture with thoughtful, user-focused design.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4 justify-center">
