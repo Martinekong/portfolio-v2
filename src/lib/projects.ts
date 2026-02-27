@@ -1,9 +1,12 @@
+import HolidazeHero from '../assets/holidaze/holidaze-hero.webp';
 import Holidaze1 from '../assets/holidaze/holidaze1.webp';
 import Holidaze2 from '../assets/holidaze/holidaze2.webp';
 import Holidaze3 from '../assets/holidaze/holidaze3.webp';
+import VarivoHero from '../assets/varivo/varivo-hero.webp';
 import Varivo1 from '../assets/varivo/varivo1.webp';
 import Varivo2 from '../assets/varivo/varivo2.webp';
 import Varivo3 from '../assets/varivo/varivo3.webp';
+import BidlyHero from '../assets/bidly/bidly-hero.webp';
 import Bidly1 from '../assets/bidly/bidly1.webp';
 import Bidly2 from '../assets/bidly/bidly2.webp';
 import Bidly3 from '../assets/bidly/bidly3.webp';
@@ -41,9 +44,8 @@ export const projects: Project[] = [
     intro:
       'Holidaze is a full-featured booking platform built as my Project Exam 2 at Noroff. The application supports authentication, role-based access, venue management and booking flows, with a strong focus on reusable architecture and clean state handling.',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    heroImage:
-      'https://images.unsplash.com/photo-1645359271414-3697b7a5781f?q=80&w=2114&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    heroAlt: 'Holidaze project preview',
+    heroImage: HolidazeHero,
+    heroAlt: 'Sunbeds by a pool',
     links: [
       {
         label: 'Live site',
@@ -105,9 +107,8 @@ export const projects: Project[] = [
     intro:
       'Varivo is a single-page e-commerce application built with React and TypeScript. The project focuses on structured state management, reusable components and a smooth shopping experience - including cart functionality, product search and a validated checkout flow.',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    heroImage:
-      'https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    heroAlt: 'Varivo project preview',
+    heroImage: VarivoHero,
+    heroAlt: 'White sneakers',
     links: [
       {label: 'Live site', href: 'https://varivo.netlify.app/', external: true},
       {
@@ -164,9 +165,8 @@ export const projects: Project[] = [
     intro:
       'Bidly is an auction house platform built as my Semester Project 2 at Noroff. The application allows users to register, create listings, place bids and manage their profile - all powered by the Noroff Auction House API.',
     tech: ['JavaScript', 'Tailwind CSS'],
-    heroImage:
-      'https://images.unsplash.com/photo-1586383334472-84d9bc3a9fe3?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    heroAlt: 'Bidly project preview',
+    heroImage: BidlyHero,
+    heroAlt: 'Laptop on a desk',
     links: [
       {
         label: 'Live site',
