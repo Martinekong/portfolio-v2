@@ -37,11 +37,13 @@ export default function Header() {
   }
 
   function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function handleLogoClick() {
     if (location.pathname !== '/') {
-      navigate('/', {replace: false});
-      requestAnimationFrame(() => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      });
+      navigate('/');
+      window.scrollTo({top: 0, behavior: 'smooth'});
       return;
     }
 
@@ -53,13 +55,14 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-6 pt-4">
         <div className="rounded-full border border-white/12 bg-white/6 backdrop-blur-md shadow-md">
           <div className="flex items-center justify-between px-5 py-3">
-            <Link
-              to={'/'}
-              className="font-medium tracking-wider text-white/90 hover:text-white transition"
+            <button
+              type="button"
+              onClick={handleLogoClick}
+              className="font-medium tracking-wider text-white/90 hover:text-white transition cursor-pointer"
               aria-label="Go to home"
             >
               Martine Kongsrud
-            </Link>
+            </button>
 
             <nav className="hidden md:flex items-center gap-2">
               {nav.map((item) => (
