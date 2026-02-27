@@ -23,9 +23,7 @@ export default function Project() {
 
   return (
     <section className="mt-32 section-wrapper text-left w-full">
-      <span className="tracking-widest uppercase text-white/60">
-        featured project
-      </span>
+      <span className="tracking-widest uppercase text-white/60">project</span>
       <h1 className="mt-3 text-5xl sm:text-6xl font-semibold tracking-wider">
         {project.name}
       </h1>

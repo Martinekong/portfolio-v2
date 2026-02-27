@@ -3,13 +3,16 @@ import {useLocation, useNavigate} from 'react-router-dom';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
-type NavItem = {label: string; hash: string};
+type NavItem =
+  | {label: string; type: 'hash'; hash: string}
+  | {label: string; type: 'route'; to: string};
 
 const nav: NavItem[] = [
-  {label: 'Projects', hash: '#projects'},
-  {label: 'Skills', hash: '#skills'},
-  {label: 'About', hash: '#about'},
-  {label: 'Contact', hash: '#contact'},
+  {label: 'Projects', type: 'route', to: '/projects'},
+  {label: 'Featured', type: 'hash', hash: '#featured'},
+  {label: 'Skills', type: 'hash', hash: '#skills'},
+  {label: 'About', type: 'hash', hash: '#about'},
+  {label: 'Contact', type: 'hash', hash: '#contact'},
 ];
 
 export default function Header() {
@@ -40,6 +43,15 @@ export default function Header() {
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
+  function handleNavClick(item: NavItem) {
+    if (item.type === 'route') {
+      navigate(item.to);
+      return;
+    }
+
+    goToHash(item.hash);
+  }
+
   function handleLogoClick() {
     if (location.pathname !== '/') {
       navigate('/');
@@ -67,9 +79,9 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-2">
               {nav.map((item) => (
                 <button
-                  key={item.hash}
+                  key={item.label}
                   type="button"
-                  onClick={() => goToHash(item.hash)}
+                  onClick={() => handleNavClick(item)}
                   className="rounded-full px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/8 transition cursor-pointer"
                 >
                   {item.label}
@@ -102,10 +114,10 @@ export default function Header() {
               <div className="flex flex-col gap-2">
                 {nav.map((item) => (
                   <button
-                    key={item.hash}
+                    key={item.label}
                     type="button"
                     onClick={() => {
-                      goToHash(item.hash);
+                      handleNavClick(item);
                       setOpen(false);
                     }}
                     className="w-full rounded-2xl px-4 py-3 text-left text-white/90 hover:bg-white/10 transition"

@@ -23,7 +23,7 @@ export default function ProjectCard({project}: {project: Project}) {
           ))}
         </div>
         <Link
-          to={`/project/${name.toLowerCase()}`}
+          to={`/projects/${name.toLowerCase()}`}
           onClick={() => window.scrollTo({top: 0, behavior: 'auto'})}
           className="flex w-full justify-center items-center gap-3 rounded-full border border-white/10 bg-white/10 px-6 py-3 transition hover:bg-white/15 mt-auto"
         >
