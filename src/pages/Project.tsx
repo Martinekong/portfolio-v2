@@ -1,11 +1,25 @@
 import {Link, useParams} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 import {getProjectByName} from '../lib/projects';
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
+import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
 
 export default function Project() {
   const {name} = useParams();
+  const [copied, setCopied] = useState(false);
 
   const project = name ? getProjectByName(name) : undefined;
+
+  useEffect(() => {
+    if (!copied) return;
+    const t = setTimeout(() => setCopied(false), 1500);
+    return () => clearTimeout(t);
+  }, [copied]);
+
+  async function copyLink() {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+  }
 
   if (!project) {
     return (
@@ -24,9 +38,28 @@ export default function Project() {
   return (
     <section className="mt-32 section-wrapper text-left w-full">
       <span className="tracking-widest uppercase text-white/60">project</span>
-      <h1 className="mt-3 text-5xl sm:text-6xl font-semibold tracking-wider">
-        {project.name}
-      </h1>
+      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-5xl sm:text-6xl font-semibold tracking-wider">
+          {project.name}
+        </h1>
+
+        <div className="flex items-center gap-3 relative">
+          <button
+            type="button"
+            onClick={copyLink}
+            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm text-white/85 hover:bg-white/10 cursor-pointer"
+          >
+            <ContentCopyOutlinedIcon fontSize="small" />
+            Copy link
+          </button>
+
+          {copied && (
+            <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide">
+              Link copied!
+            </span>
+          )}
+        </div>
+      </div>
 
       <div className="mt-10 overflow-hidden rounded-3xl border border-white/12 bg-white/6 shadow-xl w-full">
         <img
