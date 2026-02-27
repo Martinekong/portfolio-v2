@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-accent-blue: #a3dce6;
+  --color-accent-purple: #b5ccf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -30,12 +39,22 @@ body {
       600px 600px at 110% 200vh,
       rgba(181, 204, 247, 0.12),
       transparent 60%
+    ),
+    radial-gradient(
+      600px 600px at 0% 300vh,
+      rgba(163, 220, 230, 0.16),
+      transparent 60%
     );
 }
 
-main {
-  display: flex;
-  flex-direction: column;
+@layer base {
+  #root {
+    @apply flex min-h-screen flex-col;
+  }
+
+  main {
+    @apply flex flex-col grow;
+  }
 }
 
 @layer components {

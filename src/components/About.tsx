@@ -3,7 +3,7 @@ import AboutImg from '../assets/about/about.png';
 export default function About() {
   return (
     <section id="about" className="section-wrapper">
-      <span className="tracking-widest uppercase text-[#A3DCE6]">about</span>
+      <span className="tracking-widest uppercase text-accent-blue">about</span>
       <h2 className="text-5xl sm:text-6xl tracking-wider mt-4">
         Get to Know Me
       </h2>

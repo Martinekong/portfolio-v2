@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 export default function NotFound() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text center">
+    <section className="flex flex-col items-center px-6 text center flex-1 mt-48">
       <span className="text-sm tracking-widest text-[#B5CCF7]">404</span>
 
       <h1 className="text-6xl sm:text-7xl mt-4 font-bold tracking-wider bg-[linear-gradient(90deg,#B5CCF7_0%,#A3DCE6_100%)] bg-clip-text text-transparent leading-[1.2]">
