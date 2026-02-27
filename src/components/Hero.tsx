@@ -5,7 +5,7 @@ import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center min-h-screen justify-center overflow-hidden">
+    <section className="relative flex flex-col items-center min-h-screen justify-center overflow-hidden mt-14">
       <span className="tracking-widest uppercase text-white/90">
         hello, I'm
       </span>

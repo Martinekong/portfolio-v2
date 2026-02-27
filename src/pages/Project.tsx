@@ -9,7 +9,7 @@ export default function Project() {
 
   if (!project) {
     return (
-      <section className="flex flex-col gap-4 mt-32 px-6 items-center">
+      <section className="flex flex-col gap-4 mt-40 px-6 items-center">
         <p className="text-white/70">Project not found</p>
         <Link
           to={'/#projects'}
