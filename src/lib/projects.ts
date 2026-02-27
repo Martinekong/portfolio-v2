@@ -10,6 +10,18 @@ import BidlyHero from '../assets/bidly/bidly-hero.webp';
 import Bidly1 from '../assets/bidly/bidly1.webp';
 import Bidly2 from '../assets/bidly/bidly2.webp';
 import Bidly3 from '../assets/bidly/bidly3.webp';
+import MomentumHero from '../assets/momentum/momentum-hero.webp';
+import Momentum1 from '../assets/momentum/momentum1.webp';
+import Momentum2 from '../assets/momentum/momentum2.webp';
+import Momentum3 from '../assets/momentum/momentum3.webp';
+import RainydaysHero from '../assets/rainydays/rainydays-hero.webp';
+import Rainydays1 from '../assets/rainydays/rainydays1.webp';
+import Rainydays2 from '../assets/rainydays/rainydays2.webp';
+import Rainydays3 from '../assets/rainydays/rainydays3.webp';
+import ScienceHero from '../assets/science/science-hero.webp';
+import Science1 from '../assets/science/science1.webp';
+import Science2 from '../assets/science/science2.webp';
+import Science3 from '../assets/science/science3.webp';
 
 export type Project = {
   name: string;
@@ -214,6 +226,178 @@ export const projects: Project[] = [
         ],
         image: Bidly3,
         imageAlt: 'Bidly user profile dashboard',
+      },
+    ],
+  },
+  {
+    name: 'Momentum',
+    teaser:
+      'A responsive workout blog with post carousel, dynamic feed and authenticated admin tools.',
+    intro:
+      'Momentum is a dynamic workout blog built as my Project Exam 1 at Noroff. It fetches blog content from an external API and lets users browse posts, read full articles and share direct links. An authenticated admin flow allows creating, editing and deleting posts.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    heroImage: MomentumHero,
+    heroAlt: 'Weights and pink smoothie',
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://martinekong.github.io/FED1-PE1/',
+        external: true,
+      },
+      {
+        label: 'GitHub repo',
+        href: 'https://github.com/Martinekong/FED1-PE1',
+        external: true,
+      },
+    ],
+    sections: [
+      {
+        title: 'About the project',
+        body: 'Momentum was developed as my Project Exam 1 at Noroff, with the goal of creating a fully responsive blog experience using vanilla JavaScript. The project focuses on fetching, rendering and navigating blog content from an external API, while also supporting authenticated admin actions such as publishing and managing posts.',
+        bullets: [
+          'Dynamic blog feed with carousel and post grid',
+          'Individual post pages with shareable URLs.',
+          'Admin-only create, edit and delete functionality.',
+        ],
+        image: Momentum1,
+        imageAlt: 'Momentum homepage showing post grid',
+      },
+      {
+        title: 'Technologies used',
+        body: 'This project was built using HTML5, CSS3 and vanilla JavaScript. I used the Fetch API for retrieving and updating blog content, and localStorage for handling a simple authentication state.',
+        bullets: [
+          'Vanilla JavaScript + Fetch API for API integration.',
+          'LocalStorage used for login/auth state.',
+          'Responsive layout built with modern CSS.',
+        ],
+        image: Momentum2,
+        imageAlt: 'Momentum blog post detail page',
+      },
+      {
+        title: 'Features and Highlights',
+        body: 'Momentum strengtened my ability to plan and build a multi-page front-end project with different user states. A key focus was creating a smooth reading experience, clear navigation and a structured admin flow for managing content.',
+        bullets: [
+          'Carousel for showcasing latest posts.',
+          'Grid with search functionality.',
+          'Admin tools for content management (create/edit/delete).',
+          'Mobile-first responsive design across pages.',
+        ],
+        image: Momentum3,
+        imageAlt: 'Momentum login page',
+      },
+    ],
+  },
+  {
+    name: 'Rainydays',
+    teaser:
+      'An interactive online store with product filtering, cart functionality and API-driven content.',
+    intro:
+      'Rainydays is an online store for outdoor clothing built as part of my JavaScript 1 course assignment at Noroff. The project focuses on fetching products from an external API, rendering them, and managing a fully functional shopping cars using vanilla JavaScript.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    heroImage: RainydaysHero,
+    heroAlt: 'Man standing on top of a mountain',
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://martinekong.github.io/FED1-JS1-CA/',
+        external: true,
+      },
+      {
+        label: 'GitHub repo',
+        href: 'https://github.com/Martinekong/FED1-JS1-CA',
+        external: true,
+      },
+    ],
+    sections: [
+      {
+        title: 'About the project',
+        body: 'Rainydays was developed as part of my JavaScrip 1 course assignment at Noroff. The goal was to build a dynamic e-commerce experience using vanilla JavaScript and an external REST API. Users can browse products, filter by category and view detailed product pages before adding items to their cart.',
+        bullets: [
+          'Dynamic product rendering from RainyDays API.',
+          'Category and type-based product filtering.',
+          'Dedicated product detail pages with full information.',
+        ],
+        image: Rainydays1,
+        imageAlt: 'Rainydays hero section',
+      },
+      {
+        title: 'Technologies used',
+        body: 'This project was built with HTML5, CSS3 and JavaScript, with the fetch API used for retrieving product data. LocalStorage was implemented to manage the shopping cart state across pages.',
+        bullets: [
+          'Vanilla JavaScript.',
+          'Fetch API for product data retrieval.',
+          'LocalStorage for cart persistence.',
+          'Responsive layout built with CSS.',
+        ],
+        image: Rainydays2,
+        imageAlt: 'Rainydays product grid',
+      },
+      {
+        title: 'Features and Highlights',
+        body: 'Rainydays shows my ability to structure a small e-commerce application with multiple pages and interactive functionality. Special attention was given to filtering logic and cart management.',
+        bullets: [
+          'Add and remove items from cart.',
+          'Checkout summary page with selected products.',
+          'Order confirmation flow.',
+        ],
+        image: Rainydays3,
+        imageAlt: 'Rainydays order confirmed page',
+      },
+    ],
+  },
+  {
+    name: 'Science Museum',
+    teaser:
+      'A museum website built with semantic HTML and responsive CSS, designed to engage children and families.',
+    intro:
+      'Science Museum is a responsive website developes as my Semester Project 1 at Noroff. The goal was to simulate a real-world client bried and create an engaging and accessible website for a community science museum aimed at children and families.',
+    tech: ['HTML', 'CSS'],
+    heroImage: ScienceHero,
+    heroAlt: 'The earth from space',
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://martinekong.github.io/FED1-SP1/',
+        external: true,
+      },
+      {
+        label: 'GitHub repo',
+        href: 'https://github.com/Martinekong/FED1-SP1',
+        external: true,
+      },
+    ],
+    sections: [
+      {
+        title: 'About the project',
+        body: 'This project was built to simulate a professional client brief. The goal was to design and develop a visually engaging and informative website that appeals to young audiences (ages 7-15) and their families. My focus was placed on clarity, accessibility and images for a fun experience.',
+        bullets: [
+          'Multi-page structure with clear navigation.',
+          'Audience-focused design for children and families.',
+          'Legal and informational pages included (privacy and terms).',
+        ],
+        image: Science1,
+        imageAlt: 'Science museum homepage with hero section',
+      },
+      {
+        title: 'Technologies used',
+        body: 'The website was built using semantic HTML5 and vanilla CSS without frameworks. This project strengthened my understanding of layout systems, responsive design techniques and accessibility best practices.',
+        bullets: [
+          'Semantic HTML5 structure.',
+          'Responsive design using CSS.',
+          'Accessibility considerations (contrast, structure, clarity).',
+        ],
+        image: Science2,
+        imageAlt: 'Science Museum exhibitions page layout',
+      },
+      {
+        title: 'Features and Highlights',
+        body: 'Science Museum demonstrates my ability to plan and structure a complete multi-page website from scratch. Special attention was given to visual hierarchy, readability and ensuring that the experience remains engaging while still being accessible and easy to navigate.',
+        bullets: [
+          'Responsive layouts across desktop and mobile.',
+          'Engaging imagery and typography.',
+        ],
+        image: Science3,
+        imageAlt: 'Science museum about page',
       },
     ],
   },
