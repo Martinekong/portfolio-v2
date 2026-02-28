@@ -1,5 +1,5 @@
-import {skills, type Skill} from '../lib/skills';
-import SectionHeader from './SectionHeader';
+import {skills, type Skill} from '../../lib/skills';
+import SectionHeader from '../ui/SectionHeader';
 
 export default function Skills() {
   return (

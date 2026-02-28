@@ -1,6 +1,6 @@
-import {items} from '../lib/contactItem';
-import ContactCard from './ContactCard';
-import SectionHeader from './SectionHeader';
+import {items} from '../../lib/contactItem';
+import ContactCard from '../cards/ContactCard';
+import SectionHeader from '../ui/SectionHeader';
 
 export default function Contact() {
   return (

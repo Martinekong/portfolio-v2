@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {type Project} from '../lib/projects';
+import {type Project} from '../../lib/projects';
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
 
 export default function ProjectCard({project}: {project: Project}) {

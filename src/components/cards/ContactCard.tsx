@@ -1,4 +1,4 @@
-import {type ContactItem} from '../lib/contactItem';
+import {type ContactItem} from '../../lib/contactItem';
 
 export default function ContactCard({item}: {item: ContactItem}) {
   const {title, value, href, external, Icon} = item;

@@ -1,5 +1,5 @@
 import AboutImg from '../assets/about/about.png';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../ui/SectionHeader';
 
 export default function About() {
   return (

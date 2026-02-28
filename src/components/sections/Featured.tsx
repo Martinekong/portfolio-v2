@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
-import {projects} from '../lib/projects';
-import ProjectCard from './ProjectCard';
+import {projects} from '../../lib/projects';
+import ProjectCard from '../cards/ProjectCard';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../ui/SectionHeader';
 
 export default function Featured() {
   const FEATURED_COUNT = 3;
