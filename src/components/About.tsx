@@ -12,7 +12,7 @@ export default function About() {
         <img
           src={AboutImg}
           alt="Martine smiling in blue suit"
-          className="h-80 w-80 rounded-full shadow-md border border-white/12 mx-auto object-cover"
+          className="h-64 w-64 sm:h-80 sm:w-80 rounded-full shadow-md border border-white/12 mx-auto object-cover"
         />
 
         <div className="text-start flex flex-col gap-4">
