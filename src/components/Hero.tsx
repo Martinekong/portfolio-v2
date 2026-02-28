@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="mt-8 flex flex-wrap gap-4 justify-center">
         <a
-          href="#projects"
+          href="#featured"
           className="rounded-full bg-[linear-gradient(90deg,#B5CCF7_0%,#A3DCE6_100%)] px-6 py-3 text-sm font-medium text-black shadow-md transition hover:opacity-90 hover:shadow-lg w-40 text-center hover:-translate-y-1"
         >
           View My Work
