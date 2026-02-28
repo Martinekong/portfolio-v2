@@ -1,16 +1,18 @@
 import {skills, type Skill} from '../lib/skills';
+import SectionHeader from './SectionHeader';
 
 export default function Skills() {
   return (
     <section id="skills" className="section-wrapper">
-      <span className="tracking-widest uppercase text-[#B5CCF7]">
-        expertise
-      </span>
-      <h2 className="text-5xl sm:text-6xl tracking-wider mt-4">
-        Skills & Tools
-      </h2>
+      <div>
+        <SectionHeader
+          teaser="expertise"
+          title="Skills & Tools"
+          color="text-accent-purple"
+        />
+      </div>
 
-      <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
         {skills.map((s) => (
           <SkillPill key={s.name} skill={s} />
         ))}
@@ -23,7 +25,7 @@ function SkillPill({skill}: {skill: Skill}) {
   const Icon = skill.icon;
 
   return (
-    <div className="group relative flex items-center gap-4 rounded-full border border-white/12 bg-white/6 px-8 py-3 transition hover:-translate-y-0.5 hover:bg-white/10">
+    <div className="group relative flex items-center gap-4 rounded-full border border-white/10 bg-white/5 px-8 py-3 transition hover:-translate-y-0.5 hover:bg-white/10">
       <Icon size={18} style={{color: skill.color}} />
       <p className="tracking-wide text-white/90">{skill.name}</p>
       <span

@@ -14,10 +14,7 @@ export default function ProjectCard({project}: {project: Project}) {
         <p className="text-white/80">{teaser}</p>
         <div className="flex flex-wrap gap-3">
           {tech.map((t) => (
-            <span
-              key={t}
-              className="py-1 px-4 rounded-full border border-white/10 bg-white/6 backdrop-blur text-sm text-white/85"
-            >
+            <span key={t} className="tech-pill">
               {t}
             </span>
           ))}
@@ -25,7 +22,7 @@ export default function ProjectCard({project}: {project: Project}) {
         <Link
           to={`/projects/${name.toLowerCase()}`}
           onClick={() => window.scrollTo({top: 0, behavior: 'auto'})}
-          className="flex w-full justify-center items-center gap-3 rounded-full border border-white/10 bg-white/10 px-6 py-3 transition hover:bg-white/15 mt-auto"
+          className="button card-btn"
         >
           View Project
           <ArrowOutwardOutlinedIcon fontSize="small" />

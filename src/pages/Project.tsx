@@ -25,10 +25,7 @@ export default function Project() {
     return (
       <section className="flex flex-col gap-4 mt-40 px-6 items-center">
         <p className="text-white/70">Project not found</p>
-        <Link
-          to={'/#projects'}
-          className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium transition duration-300 hover:bg-white/10 text-center text-[#B5CCF7] hover:-translate-y-1 max-w-48"
-        >
+        <Link to={'/#featured'} className="button secondary-btn">
           Back to projects
         </Link>
       </section>
@@ -36,32 +33,34 @@ export default function Project() {
   }
 
   return (
-    <section className="mt-32 section-wrapper text-left w-full">
-      <span className="tracking-widest uppercase text-white/60">project</span>
-      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-5xl sm:text-6xl font-semibold tracking-wider">
-          {project.name}
-        </h1>
+    <section className="section-wrapper mt-32 text-left gap-10">
+      <div>
+        <span className="tracking-widest uppercase text-white/60">project</span>
+        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="text-5xl sm:text-6xl font-semibold tracking-wider">
+            {project.name}
+          </h1>
 
-        <div className="flex items-center gap-3 relative">
-          <button
-            type="button"
-            onClick={copyLink}
-            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 py-2 text-sm text-white/85 hover:bg-white/10 cursor-pointer"
-          >
-            <ContentCopyOutlinedIcon fontSize="small" />
-            Copy link
-          </button>
+          <div className="flex items-center gap-3 relative">
+            <button
+              type="button"
+              onClick={copyLink}
+              className="button secondary-btn px-4 py-2 text-white/85 w-auto hover:translate-y-0 font-normal"
+            >
+              <ContentCopyOutlinedIcon fontSize="small" />
+              Copy link
+            </button>
 
-          {copied && (
-            <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide">
-              Link copied!
-            </span>
-          )}
+            {copied && (
+              <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide">
+                Link copied!
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="mt-10 overflow-hidden rounded-3xl border border-white/12 bg-white/6 shadow-xl w-full">
+      <div className="overflow-hidden rounded-3xl border border-white/12 bg-white/6 shadow-xl w-full mb-8">
         <img
           src={project.heroImage}
           alt={project.heroAlt}
@@ -76,10 +75,7 @@ export default function Project() {
 
           <div className="flex flex-wrap gap-3">
             {project.tech.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-white/12 bg-white/6 px-4 py-1 text-sm text-white/85"
-              >
+              <span key={t} className="tech-pill">
                 {t}
               </span>
             ))}
@@ -91,7 +87,7 @@ export default function Project() {
                 key={l.label}
                 href={l.href}
                 target={l.external ? '_blank' : undefined}
-                className="flex w-full justify-center items-center gap-3 rounded-full border border-white/10 bg-white/10 px-6 py-3 transition hover:bg-white/15 mt-auto"
+                className="button card-btn"
               >
                 {l.label}
                 <ArrowOutwardOutlinedIcon fontSize="small" />
@@ -101,7 +97,7 @@ export default function Project() {
         </div>
       </div>
 
-      <div className="mt-16 space-y-24">
+      <div className="space-y-24">
         {project.sections.map((s) => (
           <div key={s.title} className="grid items-start gap-10 md:grid-cols-2">
             <div>

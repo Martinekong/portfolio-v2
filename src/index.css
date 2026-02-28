@@ -22,28 +22,28 @@ body {
   background-image:
     radial-gradient(
       600px 600px at 50% 0vh,
-      rgba(181, 204, 247, 0.18),
-      transparent 60%
+      rgba(181, 204, 247, 0.1),
+      transparent 70%
     ),
     radial-gradient(
       600px 600px at 110% 70vh,
-      rgba(163, 220, 230, 0.16),
-      transparent 60%
+      rgba(163, 220, 230, 0.1),
+      transparent 70%
     ),
     radial-gradient(
       600px 600px at -10% 140vh,
-      rgba(181, 204, 247, 0.14),
-      transparent 60%
+      rgba(181, 204, 247, 0.1),
+      transparent 70%
     ),
     radial-gradient(
       600px 600px at 110% 200vh,
-      rgba(181, 204, 247, 0.12),
-      transparent 60%
+      rgba(181, 204, 247, 0.1),
+      transparent 70%
     ),
     radial-gradient(
       600px 600px at 0% 300vh,
-      rgba(163, 220, 230, 0.16),
-      transparent 60%
+      rgba(163, 220, 230, 0.1),
+      transparent 70%
     );
 }
 
@@ -53,12 +53,36 @@ body {
   }
 
   main {
-    @apply flex flex-col grow;
+    @apply flex flex-col grow gap-50;
   }
 }
 
 @layer components {
   .section-wrapper {
-    @apply max-w-6xl mx-auto px-6 mb-50 scroll-mt-28;
+    @apply max-w-6xl mx-auto px-6 scroll-mt-28 flex flex-col gap-12;
+  }
+
+  .button {
+    @apply rounded-full shadow-md hover:shadow-lg text-center px-6 py-3 text-sm font-medium transition duration-300 flex justify-center items-center gap-2 cursor-pointer;
+  }
+
+  .primary-btn {
+    @apply bg-[linear-gradient(90deg,#B5CCF7_0%,#A3DCE6_100%)] text-black hover:opacity-90 w-40 hover:-translate-y-1;
+  }
+
+  .secondary-btn {
+    @apply border border-white/15 bg-white/5 hover:bg-white/10 w-40 text-accent-purple hover:-translate-y-1;
+  }
+
+  .card-btn {
+    @apply w-full border border-white/10 bg-white/10 hover:bg-white/15 mt-auto;
+  }
+
+  .social-btn {
+    @apply h-12 w-12 flex items-center hover:text-[#A3DCE6] transition duration-300 justify-center bg-white/5 rounded-full hover:bg-white/10 border border-white/15;
+  }
+
+  .tech-pill {
+    @apply rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm text-white/85;
   }
 }

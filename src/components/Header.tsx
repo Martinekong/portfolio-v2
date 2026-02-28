@@ -65,7 +65,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
       <div className="mx-auto max-w-6xl px-6 pt-4">
-        <div className="rounded-full border border-white/12 bg-white/6 backdrop-blur-md shadow-md">
+        <div className="rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-md">
           <div className="flex items-center justify-between px-5 py-3">
             <button
               type="button"
@@ -92,7 +92,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 hover:bg-white/10 transition"
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition"
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
             >
@@ -104,9 +104,10 @@ export default function Header() {
 
       {open && (
         <div className="fixed inset-0 z-50 md:hidden">
-          <div
+          <button
             className="absolute inset-0 bg-black/60 backdrop-blur-xs"
             onClick={() => setOpen(false)}
+            type="button"
           />
 
           <div className="relative mx-auto mt-24 max-w-6xl px-6">
