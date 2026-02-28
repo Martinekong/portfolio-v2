@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/navigation/ScrollToTop';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
