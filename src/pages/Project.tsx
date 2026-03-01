@@ -1,6 +1,9 @@
-import {Link, useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import {getProjectByName} from '../lib/projects';
+import ProjectNotFound from '../components/sections/ProjectNotFound';
+import Button from '../components/ui/Button';
+
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
 import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
 
@@ -22,14 +25,7 @@ export default function Project() {
   }
 
   if (!project) {
-    return (
-      <section className="flex flex-col gap-4 mt-40 px-6 items-center">
-        <p className="text-white/70">Project not found</p>
-        <Link to={'/#featured'} className="button secondary-btn">
-          Back to projects
-        </Link>
-      </section>
-    );
+    return <ProjectNotFound />;
   }
 
   return (
@@ -42,14 +38,14 @@ export default function Project() {
           </h1>
 
           <div className="flex items-center gap-3 relative">
-            <button
-              type="button"
+            <Button
               onClick={copyLink}
-              className="button secondary-btn px-4 py-2 text-white/85 w-auto hover:translate-y-0 font-normal"
+              variant="secondary"
+              className="px-4 py-2 text-white/85 w-auto hover:translate-y-0 font-normal"
             >
               <ContentCopyOutlinedIcon fontSize="small" />
               Copy link
-            </button>
+            </Button>
 
             {copied && (
               <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide">
@@ -69,9 +65,7 @@ export default function Project() {
         />
 
         <div className="flex flex-col gap-6 p-6 sm:p-8">
-          <p className="maw-w-3xl text-white/80 leading-relaxed">
-            {project.intro}
-          </p>
+          <p className="text-white/80 leading-relaxed">{project.intro}</p>
 
           <div className="flex flex-wrap gap-3">
             {project.tech.map((t) => (

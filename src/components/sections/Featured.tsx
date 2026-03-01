@@ -9,13 +9,11 @@ export default function Featured() {
 
   return (
     <section id="featured" className="section-wrapper">
-      <div>
-        <SectionHeader
-          teaser="portfolio"
-          title="Featured Projects"
-          color="text-accent-blue"
-        />
-      </div>
+      <SectionHeader
+        teaser="portfolio"
+        title="Featured Projects"
+        color="text-accent-blue"
+      />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         {projects.slice(0, FEATURED_COUNT).map((project) => (
@@ -23,7 +21,7 @@ export default function Featured() {
         ))}
       </div>
 
-      <Link to={'/projects'} className="button secondary-btn w-full">
+      <Link to="/projects" className="button secondary-btn w-fit mx-auto">
         View All Projects
         <ArrowForwardIcon fontSize="small" />
       </Link>

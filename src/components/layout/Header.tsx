@@ -29,6 +29,20 @@ export default function Header() {
     };
   }, [open]);
 
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function handleLogoClick() {
+    if (location.pathname !== '/') {
+      navigate('/');
+      scrollToTop();
+      return;
+    }
+
+    scrollToTop();
+  }
+
   function goToHash(hash: string) {
     if (location.pathname !== '/') {
       navigate('/' + hash);
@@ -37,10 +51,6 @@ export default function Header() {
 
     const el = document.querySelector(hash);
     if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
-  }
-
-  function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   function handleNavClick(item: NavItem) {
@@ -52,15 +62,8 @@ export default function Header() {
     goToHash(item.hash);
   }
 
-  function handleLogoClick() {
-    if (location.pathname !== '/') {
-      navigate('/');
-      window.scrollTo({top: 0, behavior: 'smooth'});
-      return;
-    }
-
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
+  const navBtn =
+    'rounded-full px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/8 transition cursor-pointer';
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
@@ -82,7 +85,7 @@ export default function Header() {
                   key={item.label}
                   type="button"
                   onClick={() => handleNavClick(item)}
-                  className="rounded-full px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/8 transition cursor-pointer"
+                  className={navBtn}
                 >
                   {item.label}
                 </button>

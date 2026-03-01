@@ -35,6 +35,7 @@ export default function Hero() {
           <a
             href="https://github.com/martinekong"
             target="_blank"
+            rel="noreferrer"
             aria-label="GitHub profile"
             className="social-btn"
           >
@@ -44,6 +45,7 @@ export default function Hero() {
           <a
             href="https://www.linkedin.com/in/martine-kongsrud"
             target="_blank"
+            rel="noreferrer"
             aria-label="LinkedIn profile"
             className="social-btn"
           >

@@ -4,13 +4,11 @@ import SectionHeader from '../ui/SectionHeader';
 export default function About() {
   return (
     <section id="about" className="section-wrapper">
-      <div>
-        <SectionHeader
-          teaser="about"
-          title="Get to Know Me"
-          color="text-accent-blue"
-        />
-      </div>
+      <SectionHeader
+        teaser="about"
+        title="Get to Know Me"
+        color="text-accent-blue"
+      />
 
       <div className="bg-white/7 rounded-3xl p-8 flex flex-col md:flex-row gap-12 border-white/10 border">
         <img

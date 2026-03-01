@@ -7,7 +7,7 @@ export default function ProjectCard({project}: {project: Project}) {
 
   return (
     <div className="flex h-full flex-col gap-6 text-start bg-white/7 overflow-hidden rounded-3xl border border-white/10">
-      <img src={heroImage} alt={heroAlt} className="h-48 object-cover" />
+      <img src={heroImage} alt={heroAlt} className="h-48 object-cover w-full" />
 
       <div className="flex flex-1 flex-col gap-6 px-4 pb-6">
         <h3 className="text-3xl tracking-wider">{name}</h3>
@@ -21,7 +21,6 @@ export default function ProjectCard({project}: {project: Project}) {
         </div>
         <Link
           to={`/projects/${name.toLowerCase()}`}
-          onClick={() => window.scrollTo({top: 0, behavior: 'auto'})}
           className="button card-btn"
         >
           View Project
