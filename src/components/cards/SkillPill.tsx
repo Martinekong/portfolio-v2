@@ -8,7 +8,7 @@ export default function SkillPill({skill}: {skill: Skill}) {
       <Icon size={18} style={{color: skill.color}} />
       <p className="tracking-wide text-white/90">{skill.name}</p>
       <span
-        className="absolute -inset-6 opacity-0 blur-2xl transition group-hover:opacity-20"
+        className="absolute -inset-6 opacity-0 blur-2xl transition group-hover:opacity-20 pointer-events-none"
         style={{
           background: `radial-gradient(circle at 30% 40%, ${skill.color}, transparent 60%)`,
         }}

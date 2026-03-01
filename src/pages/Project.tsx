@@ -48,7 +48,7 @@ export default function Project() {
             </Button>
 
             {copied && (
-              <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide">
+              <span className="absolute left-8 top-12 text-sm text-white/70 tracking-wide pointer-events-none">
                 Link copied!
               </span>
             )}

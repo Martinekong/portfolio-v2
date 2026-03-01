@@ -11,7 +11,7 @@ export default function ContactCard({item}: {item: ContactItem}) {
       className="group relative overflow-hidden rounded-3xl border border-white/12 bg-white/6 p-8 text-left shadow-md transition hover:-translate-y-1 hover:shadow-lg"
     >
       <span
-        className="absolute -inset-10 opacity-0 blur-3xl transition group-hover:opacity-20"
+        className="absolute -inset-10 opacity-0 blur-3xl transition group-hover:opacity-20 pointer-events-none"
         style={{
           background:
             'radial-gradient(circle at 30% 30%, #B5CCF7, transparent 60%)',
