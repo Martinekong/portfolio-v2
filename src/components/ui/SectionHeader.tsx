@@ -8,7 +8,7 @@ export default function SectionHeader({teaser, title, color}: HeaderContent) {
   return (
     <div>
       <span className={`teaser-title ${color}`}>{teaser}</span>
-      <h2 className="mt-4">{title}</h2>
+      <h2 className="mt-2">{title}</h2>
     </div>
   );
 }

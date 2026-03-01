@@ -32,7 +32,7 @@ export default function Project() {
     <section className="section-wrapper mt-32 text-left gap-10">
       <div>
         <span className="teaser-title">project</span>
-        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1>{project.name}</h1>
 
           <div className="flex items-center gap-3 relative">

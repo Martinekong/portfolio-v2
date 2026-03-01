@@ -6,7 +6,7 @@ export default function Projects() {
     <section className="mt-32 section-wrapper text-left">
       <div>
         <span className="teaser-title">All projects</span>
-        <h1 className="mt-3">Portfolio</h1>
+        <h1 className="mt-2">Portfolio</h1>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
