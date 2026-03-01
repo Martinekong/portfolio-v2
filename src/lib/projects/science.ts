@@ -9,9 +9,9 @@ export const science: Project = {
   name: 'Science Museum',
   featured: false,
   teaser:
-    'A museum website built with semantic HTML and responsive CSS, designed to engage children and families.',
+    'A museum website built with HTML and CSS, designed to engage children and families.',
   intro:
-    'Science Museum is a responsive website developes as my Semester Project 1 at Noroff. The goal was to simulate a real-world client bried and create an engaging and accessible website for a community science museum aimed at children and families.',
+    'Science Museum is a responsive website developes as my Semester Project 1 at Noroff. The goal was to simulate a real-world client brief and create an engaging and accessible website for a community science museum aimed at children and families.',
   tech: ['HTML', 'CSS'],
   heroImage: ScienceHero,
   heroAlt: 'The earth from space',
@@ -30,11 +30,10 @@ export const science: Project = {
   sections: [
     {
       title: 'About the project',
-      body: 'This project was built to simulate a professional client brief. The goal was to design and develop a visually engaging and informative website that appeals to young audiences (ages 7-15) and their families. My focus was placed on clarity, accessibility and images for a fun experience.',
+      body: 'This project was built to simulate a professional client brief. The goal was to design and develop a visually engaging and informative website that appeals to young audiences (ages 7-15) and their families. My focus was placed on images for a fun experience.',
       bullets: [
         'Multi-page structure with clear navigation.',
-        'Audience-focused design for children and families.',
-        'Legal and informational pages included (privacy and terms).',
+        'Design focused on children and families.',
       ],
       image: Science1,
       imageAlt: 'Science museum homepage with hero section',
@@ -45,14 +44,14 @@ export const science: Project = {
       bullets: [
         'Semantic HTML5 structure.',
         'Responsive design using CSS.',
-        'Accessibility considerations (contrast, structure, clarity).',
+        'Accessibility considerations.',
       ],
       image: Science2,
       imageAlt: 'Science Museum exhibitions page layout',
     },
     {
       title: 'Features and Highlights',
-      body: 'Science Museum demonstrates my ability to plan and structure a complete multi-page website from scratch. Special attention was given to visual hierarchy, readability and ensuring that the experience remains engaging while still being accessible and easy to navigate.',
+      body: 'Science Museum demonstrates my ability to plan and structure a complete multi-page website from scratch. My focus was on ensuring that the experience would be engaging while still being accessible and easy to navigate.',
       bullets: [
         'Responsive layouts across desktop and mobile.',
         'Engaging imagery and typography.',

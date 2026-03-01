@@ -11,7 +11,7 @@ export const rainydays: Project = {
   teaser:
     'An interactive online store with product filtering, cart functionality and API-driven content.',
   intro:
-    'Rainydays is an online store for outdoor clothing built as part of my JavaScript 1 course assignment at Noroff. The project focuses on fetching products from an external API, rendering them, and managing a fully functional shopping cars using vanilla JavaScript.',
+    'Rainydays is an online store for outdoor clothing built as part of my JavaScript 1 course assignment at Noroff. The project focuses on fetching products from an external API, rendering them, and managing a fully functional shopping cart using vanilla JavaScript.',
   tech: ['JavaScript', 'HTML', 'CSS'],
   heroImage: RainydaysHero,
   heroAlt: 'Man standing on top of a mountain',
@@ -30,11 +30,11 @@ export const rainydays: Project = {
   sections: [
     {
       title: 'About the project',
-      body: 'Rainydays was developed as part of my JavaScrip 1 course assignment at Noroff. The goal was to build a dynamic e-commerce experience using vanilla JavaScript and an external REST API. Users can browse products, filter by category and view detailed product pages before adding items to their cart.',
+      body: 'Rainydays was developed as part of my JavaScrip 1 course assignment at Noroff. The goal was to build an e-commerce site using vanilla JavaScript and an external REST API. Users can browse products, filter by gender and view detailed product pages before adding items to their cart.',
       bullets: [
         'Dynamic product rendering from RainyDays API.',
-        'Category and type-based product filtering.',
-        'Dedicated product detail pages with full information.',
+        'Gender and on-sale product filtering.',
+        'Product detail pages with full information.',
       ],
       image: Rainydays1,
       imageAlt: 'Rainydays hero section',
@@ -44,8 +44,8 @@ export const rainydays: Project = {
       body: 'This project was built with HTML5, CSS3 and JavaScript, with the fetch API used for retrieving product data. LocalStorage was implemented to manage the shopping cart state across pages.',
       bullets: [
         'Vanilla JavaScript.',
-        'Fetch API for product data retrieval.',
-        'LocalStorage for cart persistence.',
+        'Fetch API for product data.',
+        'LocalStorage for cart functionality.',
         'Responsive layout built with CSS.',
       ],
       image: Rainydays2,
@@ -53,7 +53,7 @@ export const rainydays: Project = {
     },
     {
       title: 'Features and Highlights',
-      body: 'Rainydays shows my ability to structure a small e-commerce application with multiple pages and interactive functionality. Special attention was given to filtering logic and cart management.',
+      body: 'Rainydays shows my ability to structure a small e-commerce application with multiple pages and interactive functionality.',
       bullets: [
         'Add and remove items from cart.',
         'Checkout summary page with selected products.',

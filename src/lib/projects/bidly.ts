@@ -30,32 +30,32 @@ export const bidly: Project = {
   sections: [
     {
       title: 'About the project',
-      body: 'Bidly was developed as part of my Semester Project 2 at Noroff. The goal was to build a fully functional auction platform using vanilla JavaScript and Tailwind CSS, interacting with a REST API. I focused on creating a responsive and intuitive user experience while handling authentication, state management and API integration without the use of frameworks.',
+      body: 'Bidly was developed as part of my Semester Project 2 at Noroff. The goal was to build a fully functional auction platform using vanilla JavaScript and Tailwind CSS. I handled authentication, conditional UI, API integration and dynamic updates manually. This project really strengthened my confidence in structuring larger JavaScript applications and thinking about user flow.',
       bullets: [
         'Full CRUD functionality for listings.',
         'User authentication and profile management.',
-        'Dynamic bid handling with real-time updates from API.',
+        'Dynamic bid handling with real-time updates.',
       ],
       image: Bidly1,
       imageAlt: 'Bidly homepage with listing grid',
     },
     {
       title: 'Technologies used',
-      body: 'This project was built using JavaScript (ES Modules), HTML5 and Tailwind CSS. This project strengthened my understanding of DOM manipulation, modular JavaScript structure and API communication patterns. Tailwind allowed me to build a consistent and responsive UI while maintaining clean and reusable utility-based styling.',
+      body: 'This project was built with JavaScript (ES Modules), HTML5 and Tailwind CSS. This project strengthened my understanding of DOM manipulation, modular JavaScript structure and API communication. Tailwind allowed me to build a consistent and responsive UI while maintaining clean and reusable utility-based styling.',
       bullets: [
         'Vanilla JavaScript with modular structure.',
         'Noroff Auction House API (v2).',
         'Tailwind CSS for responsive design.',
-        'ESLint and Prettier for code consistency.',
+        'ESLint and Prettier for consistency.',
       ],
       image: Bidly2,
       imageAlt: 'Bidly listing detail page with bidding functionality',
     },
     {
       title: 'Features and Highlights',
-      body: 'Bidly shows my ability to structure a larger front-end project with multiple pages and user states. Special attention was given to accessibility, conditional rendering based on authentication state and clear feedback for user actions such as bidding or managing listings.',
+      body: 'Bidly shows my ability to build a larger front-end project with multiple pages and user states. Accessibility and clear user feedback were important priorities throughout the project.',
       bullets: [
-        'Search and sorting functionality on homepage.',
+        'Search and sorting functionality.',
         'Conditional UI based on login state.',
         'Accessible and keyboard-friendly interactions.',
         'Profile dashboard for managing listings and bids.',

@@ -11,7 +11,7 @@ export const holidaze: Project = {
   teaser:
     'A modern booking platform for vacation rentals with intuitive search, clean UI and seamless booking experience.',
   intro:
-    'Holidaze is a full-featured booking platform built as my Project Exam 2 at Noroff. The application supports authentication, role-based access, venue management and booking flows, with a strong focus on reusable architecture and clean state handling.',
+    'Holidaze is a full-featured booking platform built as my Project Exam 2 at Noroff. The application supports authentication, role-based access, venue management and booking flows, with a strong focus on reusable components and clean state handling.',
   tech: ['React', 'TypeScript', 'Tailwind CSS'],
   heroImage: HolidazeHero,
   heroAlt: 'Sunbeds by a pool',
@@ -30,7 +30,7 @@ export const holidaze: Project = {
   sections: [
     {
       title: 'About the project',
-      body: 'Holidaze was developed as my final project exam at Noroff. The goal was to build a scalable booking platform where users can browse venues, create bookings and manage their profile. Users can also register as a venue manager and create, update or delete venues. The application is fully integrated with Noroff Holidaze API and implements authentication, protected routes and role-based access control.',
+      body: 'Holidaze was developed as my final project exam at Noroff. The goal was to build a scalable booking platform where users can browse venues, create bookings and manage their profile. Users can also register as a venue manager and create, update or delete venues.',
       bullets: [
         'Authentication with protected and role-based routes.',
         'Create, edit and delete bookings.',
@@ -42,10 +42,10 @@ export const holidaze: Project = {
     },
     {
       title: 'Technologies used',
-      body: 'The project is built with React, TypeScript and Tailwind CSS, using a modular and reusable component structure. An API client was created to centralize all network requests, ensuring clear separation between UI and data fetching logic. Form validation is handled with Zod schemas, and route protection is implemented using custom AuthGuard and ManagerGuard components.',
+      body: 'The project is built with React, TypeScript and Tailwind CSS, using a modular and reusable component structure. I created a dedicated API client to separate network logic from UI components. Form validation is handled with Zod schemas, and route protection is implementet with custom guard components.',
       bullets: [
         'Reusable UI components.',
-        'Centralized API client for all network requests.',
+        'API client for all network requests.',
         'Zod schema validation for forms.',
         'AuthContext for global authentication state.',
         'SafeImage component with fallback handling.',
@@ -55,11 +55,11 @@ export const holidaze: Project = {
     },
     {
       title: 'Features and Highlights',
-      body: 'Holidaze demonstrates advanced state handling and user experience patterns. Loading skeletons and reusable loading components ensure smooth transitions, while toast notifications provide immediate feedback for user actions. The application handles error states and avoids exposing raw API errors to the user.',
+      body: 'Holidaze demonstrates more advanced state handling and user experience patterns compared to my earlier projects. Reusable loading components and toast notifications ensures a smooth user flow. The application handles error states and avoids exposing raw API errors to the user.',
       bullets: [
-        'Reusable loading states and skeleton components.',
+        'Reusable loading and skeleton components.',
         'LocalStorage-based favorites system.',
-        'Focus on error handling and custom error messaging.',
+        'Custom error messaging and user-friendly feedback.',
         'Responsive glass-inspired UI design.',
         'Full CRUD operations for bookings and venues.',
         'Profile dashboard.',

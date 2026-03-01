@@ -11,7 +11,7 @@ export const momentum: Project = {
   teaser:
     'A responsive workout blog with post carousel, dynamic feed and authenticated admin tools.',
   intro:
-    'Momentum is a dynamic workout blog built as my Project Exam 1 at Noroff. It fetches blog content from an external API and lets users browse posts, read full articles and share direct links. An authenticated admin flow allows creating, editing and deleting posts.',
+    'Momentum is a workout blog built as my Project Exam 1 at Noroff. It fetches blog content from an external API and lets users browse posts, read full articles and share direct links. An authenticated admin flow allows creating, editing and deleting posts.',
   tech: ['JavaScript', 'HTML', 'CSS'],
   heroImage: MomentumHero,
   heroAlt: 'Weights and pink smoothie',
@@ -30,9 +30,9 @@ export const momentum: Project = {
   sections: [
     {
       title: 'About the project',
-      body: 'Momentum was developed as my Project Exam 1 at Noroff, with the goal of creating a fully responsive blog experience using vanilla JavaScript. The project focuses on fetching, rendering and navigating blog content from an external API, while also supporting authenticated admin actions such as publishing and managing posts.',
+      body: 'Momentum was developed as my Project Exam 1 at Noroff, with the goal of creating a fully responsive blog experience using vanilla JavaScript. The project focuses on fetching, rendering and navigating blog content from an external API.',
       bullets: [
-        'Dynamic blog feed with carousel and post grid',
+        'Blog feed with carousel and post grid',
         'Individual post pages with shareable URLs.',
         'Admin-only create, edit and delete functionality.',
       ],
@@ -45,19 +45,18 @@ export const momentum: Project = {
       bullets: [
         'Vanilla JavaScript + Fetch API for API integration.',
         'LocalStorage used for login/auth state.',
-        'Responsive layout built with modern CSS.',
+        'Responsive layout built with CSS.',
       ],
       image: Momentum2,
       imageAlt: 'Momentum blog post detail page',
     },
     {
       title: 'Features and Highlights',
-      body: 'Momentum strengtened my ability to plan and build a multi-page front-end project with different user states. A key focus was creating a smooth reading experience, clear navigation and a structured admin flow for managing content.',
+      body: 'Momentum strengtened my ability to plan and build a multi-page front-end project. A key focus was creating a smooth reading experience.',
       bullets: [
         'Carousel for showcasing latest posts.',
         'Grid with search functionality.',
         'Admin tools for content management (create/edit/delete).',
-        'Mobile-first responsive design across pages.',
       ],
       image: Momentum3,
       imageAlt: 'Momentum login page',
