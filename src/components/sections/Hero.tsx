@@ -1,6 +1,4 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import {contactItems} from '../../lib/contact/contactItems';
 import SouthOutlinedIcon from '@mui/icons-material/SouthOutlined';
 
 export default function Hero() {
@@ -32,33 +30,22 @@ export default function Hero() {
         </div>
 
         <div className="flex items-center gap-8 mt-8">
-          <a
-            href="https://github.com/martinekong"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub profile"
-            className="social-btn"
-          >
-            <GitHubIcon />
-          </a>
+          {contactItems.map((item) => {
+            const Icon = item.Icon;
 
-          <a
-            href="https://www.linkedin.com/in/martine-kongsrud"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn profile"
-            className="social-btn"
-          >
-            <LinkedInIcon />
-          </a>
-
-          <a
-            href="mailto:martinekongsrud@outlook.com"
-            aria-label="Send email"
-            className="social-btn"
-          >
-            <EmailOutlinedIcon />
-          </a>
+            return (
+              <a
+                key={item.title}
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noreferrer' : undefined}
+                aria-label={item.title}
+                className="social-btn"
+              >
+                <Icon />
+              </a>
+            );
+          })}
         </div>
 
         <SouthOutlinedIcon className="mt-20 animate-bounce" />

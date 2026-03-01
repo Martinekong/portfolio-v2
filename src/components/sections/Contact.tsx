@@ -1,4 +1,4 @@
-import {items} from '../../lib/contactItem';
+import {contactItems} from '../../lib/contact/contactItems';
 import ContactCard from '../cards/ContactCard';
 import SectionHeader from '../ui/SectionHeader';
 
@@ -19,7 +19,7 @@ export default function Contact() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item) => (
+        {contactItems.map((item) => (
           <ContactCard key={item.title} item={item} />
         ))}
       </div>

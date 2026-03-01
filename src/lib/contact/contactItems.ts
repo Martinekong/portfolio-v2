@@ -10,7 +10,7 @@ export type ContactItem = {
   Icon: React.ElementType;
 };
 
-export const items: ContactItem[] = [
+export const contactItems: ContactItem[] = [
   {
     title: 'Email',
     value: 'Send me an email',
