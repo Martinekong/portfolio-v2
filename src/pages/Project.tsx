@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {getProjectByName} from '../lib/projects';
+import {projects, getProjectByName} from '../lib/projects';
 import ProjectNotFound from '../components/sections/ProjectNotFound';
 import Button from '../components/ui/Button';
 
@@ -11,7 +11,7 @@ export default function Project() {
   const {name} = useParams();
   const [copied, setCopied] = useState(false);
 
-  const project = name ? getProjectByName(name) : undefined;
+  const project = name ? getProjectByName(projects, name) : undefined;
 
   useEffect(() => {
     if (!copied) return;
@@ -81,6 +81,7 @@ export default function Project() {
                 key={l.label}
                 href={l.href}
                 target={l.external ? '_blank' : undefined}
+                rel={l.external ? 'noreferrer' : undefined}
                 className="button card-btn"
               >
                 {l.label}

@@ -5,7 +5,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SectionHeader from '../ui/SectionHeader';
 
 export default function Featured() {
-  const FEATURED_COUNT = 3;
+  const featured = projects.filter((p) => p.featured === true);
 
   return (
     <section id="featured" className="section-wrapper">
@@ -16,7 +16,7 @@ export default function Featured() {
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-        {projects.slice(0, FEATURED_COUNT).map((project) => (
+        {featured.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>
