@@ -6,12 +6,12 @@ export default function ProjectCard({project}: {project: Project}) {
   const {name, teaser, tech, heroImage, heroAlt} = project;
 
   return (
-    <div className="flex h-full flex-col gap-6 text-start bg-white/7 overflow-hidden rounded-3xl border border-white/10">
+    <div className="container-strong flex h-full flex-col gap-6 text-start overflow-hidden">
       <img src={heroImage} alt={heroAlt} className="h-48 object-cover w-full" />
 
       <div className="flex flex-1 flex-col gap-6 px-4 pb-6">
-        <h3 className="text-3xl tracking-wider">{name}</h3>
-        <p className="text-white/80">{teaser}</p>
+        <h3>{name}</h3>
+        <p className="text-body">{teaser}</p>
         <div className="flex flex-wrap gap-3">
           {tech.map((t) => (
             <span key={t} className="tech-pill">

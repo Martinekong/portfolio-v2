@@ -8,7 +8,7 @@ export default function ContactCard({item}: {item: ContactItem}) {
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
-      className="group relative overflow-hidden rounded-3xl border border-white/12 bg-white/6 p-8 text-left shadow-md transition hover:-translate-y-1 hover:shadow-lg"
+      className="container group relative overflow-hidden p-8 text-left shadow-md transition hover:-translate-y-1 hover:shadow-lg"
     >
       <span
         className="absolute -inset-10 opacity-0 blur-3xl transition group-hover:opacity-20 pointer-events-none"
@@ -19,15 +19,13 @@ export default function ContactCard({item}: {item: ContactItem}) {
       />
 
       <div className="relative flex items-start gap-4">
-        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl border border-white/12 bg-white/5">
+        <div className="flex h-12 w-12 min-w-12 items-center justify-center container rounded-2xl">
           <Icon />
         </div>
 
         <div className="flex flex-col">
-          <p className="text-sm tracking-widest text-white/70">{title}</p>
-          <p className="mt-1 font-medium tracking-wide text-white/90">
-            {value}
-          </p>
+          <p className="text-muted">{title}</p>
+          <p className="text-strong mt-1">{value}</p>
         </div>
       </div>
 

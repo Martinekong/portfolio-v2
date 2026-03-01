@@ -10,7 +10,7 @@ export default function About() {
         color="text-accent-blue"
       />
 
-      <div className="bg-white/7 rounded-3xl p-8 flex flex-col md:flex-row gap-12 border-white/10 border">
+      <div className="container-strong p-8 flex flex-col md:flex-row gap-12">
         <img
           src={AboutImg}
           alt="Martine smiling in blue suit"
@@ -18,13 +18,13 @@ export default function About() {
         />
 
         <div className="text-start flex flex-col gap-4">
-          <h3 className="tracking-wider text-2xl font-medium">I'm Martine</h3>
-          <p className="tracking-wide leading-relaxed text-white/80">
+          <h3 className="text-2xl font-medium">I'm Martine</h3>
+          <p className="text-body">
             After spending eight years in healthcare, I discovered a strong
             passion for problem-solving, creativity, and technology. That led me
             into frontend development.
           </p>
-          <p className="tracking-wide leading-relaxed text-white/80">
+          <p className="text-body">
             Today, I work as a Frontend Developer, building modern web
             applications with React, TypeScript, Tailwind and Vite. I focus on
             creating intuitive, responsive and visually refined user

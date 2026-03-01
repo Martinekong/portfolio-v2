@@ -31,17 +31,15 @@ export default function Project() {
   return (
     <section className="section-wrapper mt-32 text-left gap-10">
       <div>
-        <span className="tracking-widest uppercase text-white/60">project</span>
+        <span className="teaser-title">project</span>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h1 className="text-5xl sm:text-6xl font-semibold tracking-wider">
-            {project.name}
-          </h1>
+          <h1>{project.name}</h1>
 
           <div className="flex items-center gap-3 relative">
             <Button
               onClick={copyLink}
               variant="secondary"
-              className="px-4 py-2 text-white/85 w-auto hover:translate-y-0 font-normal"
+              className="px-4 py-2 text-white/80 w-auto hover:translate-y-0 font-normal"
             >
               <ContentCopyOutlinedIcon fontSize="small" />
               Copy link
@@ -56,7 +54,7 @@ export default function Project() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-3xl border border-white/12 bg-white/6 shadow-xl w-full mb-8">
+      <div className="container-strong overflow-hidden shadow-xl w-full mb-8">
         <img
           src={project.heroImage}
           alt={project.heroAlt}
@@ -65,7 +63,7 @@ export default function Project() {
         />
 
         <div className="flex flex-col gap-6 p-6 sm:p-8">
-          <p className="text-white/80 leading-relaxed">{project.intro}</p>
+          <p className="text-body">{project.intro}</p>
 
           <div className="flex flex-wrap gap-3">
             {project.tech.map((t) => (
@@ -96,10 +94,8 @@ export default function Project() {
         {project.sections.map((s) => (
           <div key={s.title} className="grid items-start gap-10 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-semibold tracking-wider">
-                {s.title}
-              </h2>
-              <p className="mt-4 text-white/80 leading-relaxed">{s.body}</p>
+              <h2 className="text-3xl font-semibold">{s.title}</h2>
+              <p className="mt-4 text-body">{s.body}</p>
 
               {s.bullets && s.bullets.length > 0 && (
                 <ul className="mt-5 space-y-2 text-white/80">

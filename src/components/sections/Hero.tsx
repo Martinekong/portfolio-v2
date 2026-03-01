@@ -8,7 +8,7 @@ export default function Hero() {
         <span className="tracking-widest uppercase text-white/90">
           hello, I'm
         </span>
-        <h1 className="text-7xl sm:text-8xl font-bold tracking-wider bg-[linear-gradient(90deg,#B5CCF7_0%,#A3DCE6_100%)] bg-clip-text text-transparent">
+        <h1 className="text-7xl sm:text-8xl font-bold bg-[linear-gradient(90deg,#B5CCF7_0%,#A3DCE6_100%)] bg-clip-text text-transparent">
           Martine
         </h1>
         <p className="text-lg uppercase tracking-wider text-white/70 mt-4">

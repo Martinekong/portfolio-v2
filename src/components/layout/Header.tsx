@@ -62,18 +62,15 @@ export default function Header() {
     goToHash(item.hash);
   }
 
-  const navBtn =
-    'rounded-full px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/8 transition cursor-pointer';
-
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
       <div className="mx-auto max-w-6xl px-6 pt-4">
-        <div className="rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-md">
+        <div className="bg-white/5 border border-white/10 rounded-full backdrop-blur-md shadow-md">
           <div className="flex items-center justify-between px-5 py-3">
             <button
               type="button"
               onClick={handleLogoClick}
-              className="font-medium tracking-wider text-white/90 hover:text-white transition cursor-pointer"
+              className="text-strong hover:text-white transition cursor-pointer"
               aria-label="Go to home"
             >
               Martine Kongsrud
@@ -85,7 +82,7 @@ export default function Header() {
                   key={item.label}
                   type="button"
                   onClick={() => handleNavClick(item)}
-                  className={navBtn}
+                  className="nav-btn"
                 >
                   {item.label}
                 </button>
@@ -95,7 +92,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition"
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
             >
@@ -114,7 +111,7 @@ export default function Header() {
           />
 
           <div className="relative mx-auto mt-24 max-w-6xl px-6">
-            <div className="rounded-3xl border border-white/12 bg-white/8 backdrop-blur-md p-4 shadow-xl">
+            <div className="container-strong backdrop-blur-md p-4 shadow-xl">
               <div className="flex flex-col gap-2">
                 {nav.map((item) => (
                   <button

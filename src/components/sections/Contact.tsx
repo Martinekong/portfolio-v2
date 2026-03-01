@@ -12,7 +12,7 @@ export default function Contact() {
           color="text-accent-purple"
         />
 
-        <p className="mt-4 max-w-2xl text-white/80 mx-auto">
+        <p className="text-body mt-4">
           Want to collaborate, ask a question or just say hi? Reach out through
           any of these channels.
         </p>

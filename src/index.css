@@ -3,51 +3,50 @@
 @theme {
   --color-accent-blue: #a3dce6;
   --color-accent-purple: #b5ccf7;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-body {
-  background-color: #0a0a0e;
-  color: white;
-  text-align: center;
-
-  background-image:
-    radial-gradient(
-      600px 600px at 50% 0vh,
-      rgba(181, 204, 247, 0.1),
-      transparent 70%
-    ),
-    radial-gradient(
-      600px 600px at 110% 70vh,
-      rgba(163, 220, 230, 0.1),
-      transparent 70%
-    ),
-    radial-gradient(
-      600px 600px at -10% 140vh,
-      rgba(181, 204, 247, 0.1),
-      transparent 70%
-    ),
-    radial-gradient(
-      600px 600px at 110% 200vh,
-      rgba(181, 204, 247, 0.1),
-      transparent 70%
-    ),
-    radial-gradient(
-      600px 600px at 0% 300vh,
-      rgba(163, 220, 230, 0.1),
-      transparent 70%
-    );
+  --color-background: #0a0a0e;
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-white text-center;
+
+    background-image:
+      radial-gradient(
+        600px 600px at 50% 0vh,
+        rgba(181, 204, 247, 0.1),
+        transparent 70%
+      ),
+      radial-gradient(
+        600px 600px at 110% 70vh,
+        rgba(163, 220, 230, 0.1),
+        transparent 70%
+      ),
+      radial-gradient(
+        600px 600px at -10% 140vh,
+        rgba(181, 204, 247, 0.1),
+        transparent 70%
+      ),
+      radial-gradient(
+        600px 600px at 110% 200vh,
+        rgba(181, 204, 247, 0.1),
+        transparent 70%
+      ),
+      radial-gradient(
+        600px 600px at 0% 300vh,
+        rgba(163, 220, 230, 0.1),
+        transparent 70%
+      );
+  }
+
   #root {
     @apply flex min-h-screen flex-col;
   }
@@ -55,11 +54,47 @@ body {
   main {
     @apply flex flex-col grow gap-50;
   }
+
+  h1 {
+    @apply text-5xl sm:text-6xl font-semibold tracking-wider;
+  }
+
+  h2 {
+    @apply text-5xl sm:text-6xl tracking-wider;
+  }
+
+  h3 {
+    @apply text-3xl tracking-wider;
+  }
 }
 
 @layer components {
   .section-wrapper {
     @apply max-w-6xl mx-auto px-6 scroll-mt-28 flex flex-col gap-12;
+  }
+
+  .container {
+    @apply bg-white/5 border border-white/10 rounded-3xl;
+  }
+
+  .container-strong {
+    @apply bg-white/7 border border-white/12 rounded-3xl;
+  }
+
+  .teaser-title {
+    @apply tracking-widest uppercase text-white/60;
+  }
+
+  .text-body {
+    @apply text-white/80 tracking-wide leading-relaxed;
+  }
+
+  .text-muted {
+    @apply text-sm text-white/70 tracking-widest;
+  }
+
+  .text-strong {
+    @apply font-medium text-white/90 tracking-wide;
   }
 
   .button {
@@ -80,6 +115,10 @@ body {
 
   .social-btn {
     @apply h-12 w-12 flex items-center hover:text-[#A3DCE6] transition duration-300 justify-center bg-white/5 rounded-full hover:bg-white/10 border border-white/15;
+  }
+
+  .nav-btn {
+    @apply rounded-full px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/8 transition cursor-pointer;
   }
 
   .tech-pill {
