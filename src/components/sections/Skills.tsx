@@ -1,4 +1,4 @@
-import {skills} from '../../lib/skills';
+import {skills} from '../../lib/skills/skills';
 import SectionHeader from '../ui/SectionHeader';
 import SkillPill from '../cards/SkillPill';
 

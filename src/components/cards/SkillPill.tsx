@@ -1,4 +1,4 @@
-import {type Skill} from '../../lib/skills';
+import {type Skill} from '../../lib/skills/skills';
 
 export default function SkillPill({skill}: {skill: Skill}) {
   const Icon = skill.icon;
